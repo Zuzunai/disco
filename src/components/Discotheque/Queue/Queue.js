@@ -7,18 +7,16 @@ class Queue extends Component {
     inputValue: ''
   }
 
-  // transferToDisco(index) {
-  //   // TODO: Move Person from the Queue to the Discotheque
-  // }
-
   renderQueue() {
-    const { people, deletePerson, checkDressCode, transfer } = this.props
-    return people.map((person, index) => {
+    const { people, deletePerson, transfer } = this.props
+    return people.map((person) => {
       return (
         <li key={person.id} >
           <span>{person.name}</span>
-          <button onClick={() => deletePerson(person.id)} >Sacar de la cola</button>
-          <button onClick={() => transfer(person.id)} >Acceso</button>
+          <div>
+            <button onClick={() => deletePerson(person.id)} >X</button>
+            <button onClick={() => transfer(person.id)} >-></button>
+          </div>
         </li>
       )
     })
@@ -26,7 +24,6 @@ class Queue extends Component {
 
   onInputChange = (event) => {
     this.setState({ inputValue: event.target.value })
-    console.log(this.state.inputValue)
   }
   
   render() {

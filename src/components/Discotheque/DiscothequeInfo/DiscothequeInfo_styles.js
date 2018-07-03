@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 35rem;
-  margin-right: 2rem;
+  width: 30rem;
+  margin-right: 4rem;
 `
 
 export const Title = styled.h1`
