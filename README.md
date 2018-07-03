@@ -1,1 +1,1 @@
-# disco
+# react-starter
