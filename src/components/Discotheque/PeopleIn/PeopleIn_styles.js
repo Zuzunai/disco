@@ -9,9 +9,13 @@ export const Title = styled.h3``
 export const PeopleInTheDiscotheque = styled.div`
   list-style-type: none;
 
-li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: .3rem;
-}
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .3rem;
+  }
+
+  button {
+    margin-left: 1rem;
+  }
 `

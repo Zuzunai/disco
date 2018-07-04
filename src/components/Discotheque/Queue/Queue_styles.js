@@ -15,4 +15,8 @@ export const PeopleQueue = styled.div`
     justify-content: space-between;
     margin-bottom: .3rem;
   }
+
+  button {
+    margin-left: 1rem;
+  }
 `

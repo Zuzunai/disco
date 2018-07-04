@@ -6,8 +6,8 @@ import { Wrapper } from './Discotheque_styles'
 
 class Discotheque extends Component {
   state = {
-    maxGauging: 100,
-    actualGauging: 95,
+    maxCapacity: 100,
+    actualCapacity: 95,
     queueInitialPeople: [
       { id: 1, name: "Oscar", dressStyle: "DRESSED_INFORMALLY" },
       { id: 2, name: "Victor", dressStyle: "DRESSED_FORMALLY" },
@@ -53,20 +53,20 @@ class Discotheque extends Component {
     personToTransfer[0].id = this.state.discothequeInitialPeople.length + 1
 
     const updatedListPeopleIn = this.state.discothequeInitialPeople.concat(personToTransfer)
-    this.setState({ discothequeInitialPeople: updatedListPeopleIn, actualGauging: this.state.maxGauging - this.state.discothequeInitialPeople.length - 1 }) 
+    this.setState({ discothequeInitialPeople: updatedListPeopleIn, actualCapacity: this.state.maxCapacity - this.state.discothequeInitialPeople.length - 1 }) 
   }
 
   deletePersonInTheDiscotheque = (idPersonToDelete) => {
     const updatedList = this.state.discothequeInitialPeople.filter(person => person.id !== idPersonToDelete)
-    this.setState({ discothequeInitialPeople: updatedList, actualGauging: this.state.maxGauging - this.state.discothequeInitialPeople.length + 1 })
+    this.setState({ discothequeInitialPeople: updatedList, actualCapacity: this.state.maxCapacity - this.state.discothequeInitialPeople.length + 1 })
   }
   
   render() {
     return (
       <Wrapper>
         <DiscothequeInfo 
-          maxGauging={this.state.maxGauging}
-          actualGauging={this.state.actualGauging} 
+          maxCapacity={this.state.maxCapacity}
+          actualCapacity={this.state.actualCapacity} 
         />
         <Queue 
           people={this.state.queueInitialPeople} 
