@@ -8,14 +8,14 @@ class Queue extends Component {
   }
 
   renderQueue() {
-    const { people, deletePerson, transfer } = this.props
-    return people.map((person) => {
+    const { peopleQueue, personOnTheQueueDeleteRequested, tranferPersonToTheDiscothequeRequested } = this.props
+    return peopleQueue.people.map(person => {
       return (
         <li key={person.id} >
           <span>{person.name}</span>
           <div>
-            <button onClick={() => deletePerson(person.id)} >X</button>
-            <button onClick={() => transfer(person.id)} >-></button>
+            <button onClick={() => personOnTheQueueDeleteRequested(person.id)} >X</button>
+            <button onClick={() => tranferPersonToTheDiscothequeRequested(person.id)} >-></button>
           </div>
         </li>
       )
@@ -27,7 +27,7 @@ class Queue extends Component {
   }
   
   render() {
-    const { addPerson } = this.props;
+    const { addPersonToTheQueueRequested } = this.props;
 
     return (
       <Wrapper>
@@ -39,7 +39,7 @@ class Queue extends Component {
           value={this.state.inputValue}
           onChange={this.onInputChange}
         />
-        <button onClick={() => addPerson(this.state.inputValue)} >Add to queue</button>
+        <button onClick={() => addPersonToTheQueueRequested(this.state.inputValue)} >Add to queue</button>
       </Wrapper>
     )
   }
