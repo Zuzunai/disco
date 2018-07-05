@@ -4,12 +4,12 @@ import { Wrapper, Title, PeopleInTheDiscotheque } from './PeopleIn_styles'
 
 class PeopleIn extends Component {
   renderPeopleIn() {
-    const { people, deletePerson } = this.props
-    return people.map((person, index) => {
+    const { peopleIn, personInTheDiscoDeleteRequested } = this.props
+    return peopleIn.people.map((person) => {
       return (
         <li key={person.id} >
           <span>{person.name}</span>
-          <button onClick={() => deletePerson(person.id)} >X</button>
+          <button onClick={() => personInTheDiscoDeleteRequested(person.id)} >X</button>
         </li>
       )
     })

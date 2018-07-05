@@ -14,12 +14,11 @@ export const deletePersonOnTheQueue = (currentState, idPersonToDelete) =>
   ({...currentState, people: currentState.people.filter(person => person.id !== idPersonToDelete)})
 
 export const addPerson = (name) => {
-  const lastPersonIdOnTheQueue = this.people[this.people.length - 1].id
-  this.people = [
-    ...this.people,
-    {id: lastPersonIdOnTheQueue + 1, name: name, dressStyle: this._randomDressCode()}
+  const lastPersonIdOnTheQueue = state().people[state().people.length - 1].id
+  state().people = [
+    ...state().people,
+    {id: lastPersonIdOnTheQueue + 1, name: name, dressStyle: randomDressCode()}
   ]
-  return null
 }
 
 export const randomDressCode = () => {

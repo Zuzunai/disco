@@ -1,5 +1,5 @@
-import {state, deletePersonOnTheQueue, addPerson} from './QueueModel'
-import { PERSON_ON_THE_QUEUE_DELETE_REQUESTED, TRANSFER_PERSON_TO_THE_DISCOTHEQUE_REQUESTED, ADD_PERSON_TO_THE_QUEUE_REQUESTED} from './actions'
+import { state, deletePersonOnTheQueue, addPerson, onInputAddPersonChanged } from './QueueModel'
+import { PERSON_ON_THE_QUEUE_DELETE_REQUESTED, TRANSFER_PERSON_TO_THE_DISCOTHEQUE_REQUESTED, ADD_PERSON_TO_THE_QUEUE_REQUESTED, ADD_PERSON_INPUT_CHANGED} from './actions'
 
 const initialState = state()
 

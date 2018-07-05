@@ -6,16 +6,16 @@ class Queue extends Component {
   state = {     
     inputValue: ''
   }
-
+  
   renderQueue() {
-    const { peopleQueue, personOnTheQueueDeleteRequested, tranferPersonToTheDiscothequeRequested } = this.props
+    const { peopleQueue, personOnTheQueueDeleteRequested, transferPersonToTheDiscothequeRequested } = this.props
     return peopleQueue.people.map(person => {
       return (
         <li key={person.id} >
           <span>{person.name}</span>
           <div>
             <button onClick={() => personOnTheQueueDeleteRequested(person.id)} >X</button>
-            <button onClick={() => tranferPersonToTheDiscothequeRequested(person.id)} >-></button>
+            <button onClick={() => transferPersonToTheDiscothequeRequested(person)} >-></button>
           </div>
         </li>
       )
