@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Wrapper } from './Capacity_styles'
 
-const Capacity = (props) => {
-  const { maxCapacity, actualCapacity } = props
+class Capacity extends Component {
+  
+  render() {
+    const { capacity } = this.props
 
-  return (
-    <Wrapper>
-      <p>Aforo máximo: {maxCapacity}</p>
-      <p>Aforo actual: {actualCapacity}</p>
-    </Wrapper>
-  )
+    return (
+      <Wrapper>
+        <p>Aforo máximo: {capacity.maxCapacity}</p>
+        <p>Aforo actual: {capacity.actualCapacity}</p>
+      </Wrapper>
+    )
+  }
 }
 
 export default Capacity

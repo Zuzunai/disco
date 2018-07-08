@@ -3,6 +3,12 @@ import React, { Component } from 'react';
 import { Wrapper, Title, PeopleInTheDiscotheque } from './PeopleIn_styles'
 
 class PeopleIn extends Component {
+
+  componentDidMount() {
+    const { peopleIn, peopleInInitialEntryCompleted } = this.props
+    peopleInInitialEntryCompleted(peopleIn.people.length)
+  }
+
   renderPeopleIn() {
     const { peopleIn, personInTheDiscoDeleteRequested } = this.props
     return peopleIn.people.map((person) => {

@@ -1,3 +1,5 @@
+import lastIdFinder from '../../../infrastructure/lastIdFinder'
+
 export const state = () => ({
   people: [
     {id: 1, name: 'Oscar', dressStyle: 'DRESSED_INFORMALLY'},
@@ -14,14 +16,15 @@ export const deletePersonOnTheQueue = (currentState, idPersonToDelete) =>
 
 export const onInputAddPersonChanged = (currentState, inputEvent) => 
   ({...currentState, addInputPerson: inputEvent})
-  
-export const addPerson = (currentState) => {
-  const lastPersonIdOnTheQueue = currentState.people[currentState.people.length - 1].id
-  const person = {id: lastPersonIdOnTheQueue + 1, name: currentState.addInputPerson, dressStyle: randomDressCode()}
+
+export const addPerson = currentState => {
+  const newID = lastIdFinder(currentState)
+  const person = {id: newID + 1, name: currentState.addInputPerson, dressStyle: _randomDressCode()}
+  currentState.addInputPerson = ''
   return ({...currentState, people: currentState.people.concat([person])})
 }
 
-export const randomDressCode = () => {
+const _randomDressCode = () => {
   const dressCode = ['DRESSED_FORMALLY', 'DRESSED_INFORMALLY']
   const randomNumber = Math.floor(Math.random() * 2)
   return dressCode[randomNumber]

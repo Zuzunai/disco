@@ -1,15 +1,16 @@
 import { state, deletePersonInTheDiscotheque, addPersonInTheDiscotheque} from './peopleInModel'
 import { PERSON_ON_THE_DISCO_DELETED_REQUESTED } from './actions'
-import { TRANSFER_PERSON_TO_THE_DISCOTHEQUE_REQUESTED } from '../Queue/actions'
+import { ALLOW_TO_PASS, DO_NOT_ALLOW_TO_PASS } from '../DiscothequeInfo/Capacity/actions'
 
 const initialState = state()
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case PERSON_ON_THE_DISCO_DELETED_REQUESTED:
+      // action.asyncDispatch({type: ALLOW_TO_PASS, payload: action.payload})
       return deletePersonInTheDiscotheque(state, action.payload)
-
-    case TRANSFER_PERSON_TO_THE_DISCOTHEQUE_REQUESTED:
+    
+    case ALLOW_TO_PASS:
       return addPersonInTheDiscotheque(state, action.payload)
 
     default:

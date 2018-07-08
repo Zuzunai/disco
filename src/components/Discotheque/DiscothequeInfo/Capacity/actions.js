@@ -1,0 +1,2 @@
+export const ALLOW_TO_PASS = 'ALLOW_TO_PASS'
+export const DO_NOT_ALLOW_TO_PASS = 'DO_NOT_ALLOW_TO_PASS'
