@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Discotheque from '../components/Discotheque/Discotheque'
+import Discotheque from './Discotheque/Discotheque'
 
 class App extends Component {
 	render () {

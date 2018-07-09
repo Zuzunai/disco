@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DiscothequeInfo from './DiscothequeInfo/DiscothequeInfo'
-import Queue from './Queue'
-import PeopleIn from './PeopleIn'
+import Queue from '../../containers/Queue'
+import PeopleIn from '../../containers/PeopleIn'
 import { Wrapper } from './Discotheque_styles'
 
 class Discotheque extends Component {
