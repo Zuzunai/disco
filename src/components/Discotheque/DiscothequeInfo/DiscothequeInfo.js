@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Capacity from './Capacity'
+import Capacity from '../../../containers/Capacity'
 
 import { Wrapper, Title, Description } from './DiscothequeInfo_styles';
 

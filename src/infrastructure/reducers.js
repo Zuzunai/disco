@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
-import queueReducers from '../components/Discotheque/Queue/reducers'
-import peopleInReducers from '../components/Discotheque/PeopleIn/reducers'
-import capacityReducers from '../components/Discotheque/DiscothequeInfo/Capacity/reducers'
+import queueReducers from '../containers/Queue/reducers'
+import peopleInReducers from '../containers/PeopleIn/reducers'
+import capacityReducers from '../containers/Capacity/reducers'
 
 export default combineReducers({
   peopleQueue: queueReducers,

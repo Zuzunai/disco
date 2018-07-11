@@ -1,6 +1,6 @@
 import { state, deletePersonOnTheQueue, addPerson, onInputAddPersonChanged } from './QueueModel'
 import { PERSON_ON_THE_QUEUE_DELETE_REQUESTED, ADD_PERSON_TO_THE_QUEUE_REQUESTED, ADD_PERSONS_INPUT_CHANGED} from './actions'
-import { ALLOW_TO_PASS, DO_NOT_ALLOW_TO_PASS } from '../DiscothequeInfo/Capacity/actions'
+import { ALLOW_TO_PASS, DO_NOT_ALLOW_TO_PASS } from '../Capacity/actions'
 
 const initialState = state()
 

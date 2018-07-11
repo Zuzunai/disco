@@ -1,4 +1,4 @@
-import lastIdFinder from '../../../infrastructure/lastIdFinder'
+import lastIdFinder from '../../infrastructure/lastIdFinder'
 
 export const state = () => ({
   people: [

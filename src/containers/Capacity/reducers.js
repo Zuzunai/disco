@@ -1,6 +1,6 @@
 import { state, incrementCapacity, decrementCapacity, initializeActualCapacity } from './capacityModel'
-import { TRANSFER_PERSON_TO_THE_DISCOTHEQUE_REQUESTED } from '../../Queue/actions'
-import { PERSON_ON_THE_DISCO_DELETED_REQUESTED, PEOPLE_IN_INITIAL_ENTRY_COMPLETED } from '../../PeopleIn/actions'
+import { TRANSFER_PERSON_TO_THE_DISCOTHEQUE_REQUESTED } from '../Queue/actions'
+import { PERSON_ON_THE_DISCO_DELETED_REQUESTED, PEOPLE_IN_INITIAL_ENTRY_COMPLETED } from '../PeopleIn/actions'
 import { ALLOW_TO_PASS, DO_NOT_ALLOW_TO_PASS } from './actions'
 
 const initialState = state()
